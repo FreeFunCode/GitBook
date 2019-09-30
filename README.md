@@ -31,7 +31,7 @@ git push origin master
   1. 切换分支到gh-pages，并且删除分支下旧文件
 
 ```
-git checkout --orphan gh-pages
+git checkout gh-pages
 git rm -f --cached -r .
 git clean -df
 rm -rf *~
@@ -53,8 +53,19 @@ git commit -m "Publish book"
 git push -u origin gh-pages
 ```
 
+--------
 
-
+## 目录收缩插件：expandable-chapters-small
+book.json:
+```
+{
+ 
+    "plugins": [
+        "expandable-chapters-small@^0.1.7"
+    ]
+}
+```
+`gitbook install`
  
 
 
